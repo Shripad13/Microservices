@@ -22,6 +22,7 @@ UI -- Business Logic -- Data Access Layer
 6. UI can talk to Multiple Services with each having different DB
 7. How are you enable the communication between services.
 
+> Microservices is the application architecture.
 
 # Interview Answer- 
 Monolithic architecture is simple and suitable for small applications but becomes hard to scale and maintain as the system grows. Microservices architecture breaks the application into independent services, improving scalability and fault tolerance but increasing system complexity.  
