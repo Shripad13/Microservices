@@ -19,12 +19,14 @@ UI -- Business Logic -- Data Access Layer
 3. Limited Technology Stack: Monolithic applications are typically built using a single technology stack, which can limit the ability to adopt new technologies or frameworks for specific components.
 4. Tight Coupling: Components within a monolithic application are often tightly coupled, making it difficult to isolate and fix issues without affecting other parts of the application.
 5. Slower Development Cycles: As the codebase grows, it can become more complex and harder to manage, leading to slower development cycles and increased risk of bugs.
+6. Complex  Development chaleenges
+
 
 # Microsevices Project:
     An Application is built as independent components that run each application process as a service.
 1. Microservice allow developers to become language & tech agnostic.
 2. 
-3. In this case we have luxury to run different services using different technologies such as java, nodejs, pyhton etc
+3. In this case we have luxury to run different services using different technologies such as java, nodejs, python, go, dot net etc
 4. We can upsize & downsize specific service independently.
 5. If one servie fails then Entire Application will not have outage, only specific service will have outage.
 6. UI can talk to Multiple Services with each having different DB
@@ -38,7 +40,8 @@ Isolated failures while other services are still running
 Use Python for AI, Go for speed, Java for APIs
 Each team owns its service(build, deploy, manage)
 Fast deployments
-
+During Peak Sale / Offers, we can scale particualr services like payment, order management etc
+Also there will be a headroom in terms of Infra resources to scale the services as per the business needs.
 
 # The problems with microservices:
 
@@ -101,3 +104,11 @@ Mater Data/ Business Data - Inject to DB for business needs.
 
 ## ROboSHop Project - 
 11 servers, 11 security Groups, 11 DNS records
+
+
+# MonoRepo - All services are in the same repository, sharing the same codebase and version control. This approach can simplify development and deployment for smaller teams or projects with closely related services, but it may lead to challenges in managing dependencies and scaling as the project grows.
+Maintains in folder structure - 
+Complex CICD pipeline. - you have to run Pipeline for entire application even if you have to deploy only one service.
+
+# PolyRepo - All services are in different repositories, each with its own codebase, version control, and deployment pipeline. This approach allows for better separation of concerns and can be more suitable for larger teams or projects with distinct services.
+Can be created different CICD pipeline for each service. - you can run Pipeline for specific service which you want to deploy.
